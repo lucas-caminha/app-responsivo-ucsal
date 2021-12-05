@@ -11,11 +11,11 @@ body {
 }
 
 .moeda-card-container {
-  width: 342px;
-  height: 221px;
+  width: 320px;
+  height: 210px;
   background-color: white;
   padding: 1rem;
-  margin: 1rem;
+  margin: 3rem;
   border-radius: 4px;
   border-left: solid blue 4px;
 
@@ -76,4 +76,12 @@ body {
   align-self: flex-end;
   margin-top: 0.25rem;
   font-size: 0.875rem;
+}
+
+#moedas-container {
+width: 100%;
+ padding: 1.5rem;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
 }
