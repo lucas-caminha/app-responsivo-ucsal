@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>App - Moedas</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="../app-responsivo-ucsal/static/imagens/cash-coin.svg">
-<link rel="stylesheet" href="../app-responsivo-ucsal/static/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="../app-responsivo-ucsal/static/css/app.css">
-<script type="text/javascript" src="../app-responsivo-ucsal/static/js/moedas.js"></script>
-<script type="text/javascript" src="../app-responsivo-ucsal/static/jquery/jquery-3.6.0.min.js"></script>
-</head>
-<body onload="call()">
-  <!-- Navbar Principal -->
-  <div id="navbar-principal">
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Moedas</a>
-      </li>
-    </ul>
-  </div>
-
-  <div id="moedas-container" class="d-flex justify-content-center"></div>
-
-  <div id="result"></div>
-
-</body>
+  <head>
+    <title>App - Moedas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../app-responsivo-ucsal/static/imagens/cash-coin.svg">
+    <link rel="stylesheet" href="../app-responsivo-ucsal/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../app-responsivo-ucsal/static/css/app.css">
+    <script type="text/javascript" src="../app-responsivo-ucsal/static/js/moedas.js"></script>
+    <script type="text/javascript" src="../app-responsivo-ucsal/static/jquery/jquery-3.6.0.min.js"></script>
+  </head>
+  <body onload="call()">
+    <!-- Navbar Principal -->
+    <div id="navbar-principal">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Moedas</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Container das Moedas -->
+    <div id="moedas-container" class="d-flex justify-content-center">
+        <!-- Resultado da chamada da API de Moedas -->
+        <div id="result"></div>
+    </div>
+  </body>
 </html>
