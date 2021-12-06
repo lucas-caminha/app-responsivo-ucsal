@@ -6,8 +6,10 @@
 <link rel="icon" type="image/x-icon" href="../app-responsivo-ucsal/static/imagens/cash-coin.svg">
 <link rel="stylesheet" href="../app-responsivo-ucsal/static/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../app-responsivo-ucsal/static/css/app.css">
+<script type="text/javascript" src="../app-responsivo-ucsal/static/js/moedas.js"></script>
+<script type="text/javascript" src="../app-responsivo-ucsal/static/jquery/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body onload="call()">
   <!-- Navbar Principal -->
   <div id="navbar-principal">
     <ul class="nav justify-content-center">
@@ -17,41 +19,9 @@
     </ul>
   </div>
 
-  <div id="moedas-container" class="d-flex justify-content-center">
-    <div class="moeda-card-container">
-      <div class="moeda-info-container">
-        <h2>Nome</h2>
-        <p>Data</p>
-      </div>
-      <div class="moeda-valor-container">
-        <span class="value">Valor</span>
-        <span class="variation">Variação</span>
-      </div>
-    </div>
+  <div id="moedas-container" class="d-flex justify-content-center"></div>
 
-    <div class="moeda-card-container">
-        <div class="moeda-info-container">
-          <h2>Nome</h2>
-          <p>Data</p>
-        </div>
-        <div class="moeda-valor-container">
-          <span class="value">Valor</span>
-          <span class="variation">Variação</span>
-        </div>
-    </div>
-
-    <div class="moeda-card-container">
-        <div class="moeda-info-container">
-          <h2>Nome</h2>
-          <p>Data</p>
-        </div>
-        <div class="moeda-valor-container">
-          <span class="value">Valor</span>
-          <span class="variation">Variação</span>
-        </div>
-    </div>
-
-  </div>
+  <div id="result"></div>
 
 </body>
 </html>

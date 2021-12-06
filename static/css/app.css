@@ -17,7 +17,7 @@ body {
   padding: 1rem;
   margin: 3rem;
   border-radius: 4px;
-  border-left: solid blue 4px;
+  border-left: solid 4px;
 
   display: flex;
   flex-direction: column;
@@ -65,11 +65,10 @@ body {
 
 .moeda-valor-container .value {
   font-size: 3rem;
-  color: blue;
+  color: black;
 }
 
 .moeda-valor-container .variation {
-  background-color: blue;
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -79,9 +78,37 @@ body {
 }
 
 #moedas-container {
-width: 100%;
- padding: 1.5rem;
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#result {
+  display: none;
+}
+
+.moeda-info-container h2 {
+  font-size: 100%;
+}
+
+.moeda-info-container p{
+  font-size: 80%;
+}
+
+.green-background {
+  background-color: green;
+}
+
+.red-background {
+  background-color: red;
+}
+
+.green-background-left {
+  border-left-color: green;
+}
+
+.red-background-left {
+  border-left-color: red;
 }
