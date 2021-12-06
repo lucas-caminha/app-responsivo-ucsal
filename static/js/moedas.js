@@ -7,6 +7,7 @@ function call(){
 
       for(var i = 0; i < size; i++){
 
+        var code = Object.entries(obj)[i][1].code;
         var nome = Object.entries(obj)[i][1].name
         var valor = Object.entries(obj)[i][1].bid;
         var variacao = Object.entries(obj)[i][1].varBid;
@@ -19,7 +20,7 @@ function call(){
           var colorLeft = setColorVariacaoLeft(variacao);
           var positive = setPositive(variacao);
 
-          var card = createMoedaCard(colorLeft, nome, data, valor, color, positive, variacao);
+          var card = createMoedaCard(colorLeft, nome, data, valor, color, positive, variacao, code);
           card = $.parseHTML(card);
           $("#moedas-container").append(card);
         }
@@ -29,9 +30,9 @@ function call(){
 
 }
 
-function createMoedaCard(colorLeft, nome, data, valor, color, positive, variacao){
-  return '<div class="moeda-card-container '+colorLeft+'"><div class="moeda-info-container"><h2>'+
-  nome+'</h2><p>'+data+'</p></div><div class="moeda-valor-container"><span class="value">'+
+function createMoedaCard(colorLeft, nome, data, valor, color, positive, variacao, code){
+  return '<div class="moeda-card-container '+colorLeft+'" onclick="openModal(\'' + nome + '\', '+valor+')" data-nome="'+nome+'"><div class="moeda-info-container"><h2 id="nome_moeda">'+
+  nome+'</h2><p>'+data+'</p></div><div class="moeda-valor-container"><span class="value" id="valor">'+
   valor+'</span><span class="variation ' + color + '">'+positive+variacao+'</span></div></div>';
 }
 
@@ -96,4 +97,29 @@ function onlyRealBrasiliero(nome){
       return true;
     }
     return false;
+}
+
+function openModal(moeda, valor){
+  document.getElementById("modal-titulo").innerHTML = "Real Brasileiro -> " + moeda;
+  document.getElementById("moeda2").innerHTML = moeda;
+  document.getElementById("moedaSelecionada").value = valor;
+  document.getElementById("moedaSelecionadaHidden").value = valor;
+  document.getElementById("input-moeda").value = 1;
+  $('#modal-conversao').modal('show');
+}
+
+function closeModal(){
+  $('#modal-conversao').modal('hide');
+}
+
+function converteMoeda(){
+  var real = document.getElementById("input-moeda").value;
+  var moedaSelecionadaHiddenValue = document.getElementById("moedaSelecionadaHidden").value;
+
+  console.log("BRL: " + real + " | MD: " + moedaSelecionadaHiddenValue);
+
+  var x = real / moedaSelecionadaHiddenValue;
+  console.log(x);
+
+  document.getElementById("moedaSelecionada").value = x;
 }
